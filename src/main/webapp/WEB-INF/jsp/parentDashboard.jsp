@@ -12,7 +12,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets1/images/aikshika.png">
+        <link rel="shortcut icon" href="assets/images/aikshika.png">
         <!-- App title -->
         <title>Aikshika</title>
 
@@ -20,13 +20,13 @@
 		<link rel="stylesheet" href="../plugins/morris/morris.css">
 
         <!-- App css -->
-        <link href="assets1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets1/css/core.css" rel="stylesheet" type="text/css" />
-        <link href="assets1/css/components.css" rel="stylesheet" type="text/css" />
-        <link href="assets1/css/icons.css" rel="stylesheet" type="text/css" />
-        <link href="assets1/css/pages.css" rel="stylesheet" type="text/css" />
-        <link href="assets1/css/menu.css" rel="stylesheet" type="text/css" />
-        <link href="assets1/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,7 +36,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
-        <script src="assets1/js/modernizr.min.js"></script>
+        <script src="assets/js/modernizr.min.js"></script>
          <script>
         			$(document).ready(function() {
 
@@ -98,14 +98,14 @@
 
                 <!-- LOGO -->
                 <div class="topbar-left">
-                    <a href="#" class="logo"><span><img src="assets1/images/aikshika.png"></span><i class=<img src="assets1/images/aikshika.png"/>></i></i></a>
+                    <a href="#" class="logo"><span><img src="assets/images/aikshika.png"></span><i class=<img src="assets/images/aikshika.png"/>></i></i></a>
                     <!-- Image logo -->
                     <!--<a href="index.web" class="logo">-->
                         <!--<span>-->
-                            <!--<img src="assets1/images/logo.png" alt="" height="30">-->
+                            <!--<img src="assets/images/logo.png" alt="" height="30">-->
                         <!--</span>-->
                         <!--<i>-->
-                            <!--<img src="assets1/images/logo_sm.png" alt="" height="28">-->
+                            <!--<img src="assets/images/logo_sm.png" alt="" height="28">-->
                         <!--</i>-->
                     <!--</a>-->
                 </div>
@@ -178,7 +178,7 @@
 
                             <li class="dropdown user-box">
                                 <!-- <a href="" class="dropdown-toggle waves-effect user-link" data-toggle="dropdown" aria-expanded="true">
-                                    <img src="assets1/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
                                 </a> -->
                                  <a href="" class="dropdown-toggle waves-effect user-link " data-toggle="dropdown" aria-expanded="true">  
                                 <%
@@ -236,7 +236,7 @@
 
                             <div class="col-lg-6 col-md-4 col-sm-6">
                                 <!-- <div class="card-box widget-box-one">
-                                    <center><img src="assets1/images/carre_homme.jpg"></center>
+                                    <center><img src="assets/images/carre_homme.jpg"></center>
                                 </div> -->
                                 
                                 <form action="parent_profile.web" method="post" id = "form1"
@@ -263,7 +263,7 @@
 												<c:otherwise>
 													<div class="card-box widget-box-one">
 														<center>
-															<img src="assets1/images/carre_homme.jpg" style="width:550px;height: 330px;" class="img-responsive">
+															<img src="assets/images/carre_homme.jpg" style="width:550px;height: 330px;" class="img-responsive">
 														</center>
 													</div>
 												</c:otherwise>
@@ -297,11 +297,11 @@
                                 <center><div class="card-box widget-box-one">
                                     
                                     <li class="dropdown hidden-xs">
-                                <a data-toggle="dropdown" class="dropdown-toggle menu-item" href="#" aria-expanded="false"><img src="assets1/images/leave.png">
+                                <a data-toggle="dropdown" class="dropdown-toggle menu-item" href="#" aria-expanded="false"><img src="assets/images/leave.png">
                                     </a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li><a href="par_leave request.web"><img src="assets1/images/Leave Application.png"></a></li>
-                                    <li><a href="par_StudleaveInbox.web"><img src="assets1/images/Leave Inbox.png"></a></li>
+                                    <li><a href="par_leave request.web"><img src="assets/images/Leave Application.png"></a></li>
+                                    <li><a href="par_StudleaveInbox.web"><img src="assets/images/Leave Inbox.png"></a></li>
                                     
                                 </ul>
                             </li>
@@ -310,13 +310,13 @@
                             </div><!-- end col -->
 							<div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_student profile.web"><img src="assets1/images/Student profile.png"></a></center>
+                                    <center><a href="par_student profile.web"><img src="assets/images/Student profile.png"></a></center>
                                 </div>
                             </div><!-- end col -->
 							
 							 <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_marks.web"><img src="assets1/images/Marks.png"></a></center>
+                                    <center><a href="par_marks.web"><img src="assets/images/Marks.png"></a></center>
                                 </div>
                             </div><!-- end col -->
 
@@ -324,20 +324,20 @@
 
                            <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_attendance.web"><img src="assets1/images/attendence .png"></a></center>
+                                    <center><a href="par_attendance.web"><img src="assets/images/attendence .png"></a></center>
                                 </div>
                             </div><!-- end col -->
 
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_timetable.web"><img src="assets1/images/timetable.png"></a></center>
+                                    <center><a href="par_timetable.web"><img src="assets/images/timetable.png"></a></center>
                                 </div>
                             </div><!-- end col -->
                             
                            <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
                                    
-                                <center><a href="par_homework.web"><img src="assets1/images/homework.png"></a></center>
+                                <center><a href="par_homework.web"><img src="assets/images/homework.png"></a></center>
                                     
                                 </div>
                             </div><!-- end col -->
@@ -348,7 +348,7 @@
 
                             <!--<div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="ad_student perform.web"><img src="assets1/images/studentsperformance.png"</a></center>
+                                    <center><a href="ad_student perform.web"><img src="assets/images/studentsperformance.png"</a></center>
                                 </div>
                             </div>--><!-- end col -->
                             
@@ -367,38 +367,38 @@
 							
                         		<div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_notification.web"><img src="assets1/images/invitation.png"></a></center>
+                                    <center><a href="par_notification.web"><img src="assets/images/invitation.png"></a></center>
                                 </div>
                             </div><!-- end col -->
 
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_question&answer.web"><img src="assets1/images/Queries.png"></a></center>
+                                    <center><a href="par_question&answer.web"><img src="assets/images/Queries.png"></a></center>
                                 </div>
                             </div><!-- end col -->
 
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_fee details.web"><img src="assets1/images/fee details.png"></a></center>
+                                    <center><a href="par_fee details.web"><img src="assets/images/fee details.png"></a></center>
                                 </div>
                             </div><!-- end col -->
                             
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_gps tarcking.web"><img src="assets1/images/gps tracking.png"></a></center>
+                                    <center><a href="par_gps tarcking.web"><img src="assets/images/gps tracking.png"></a></center>
                                 </div>
                             </div><!-- end col -->
 
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
-                                    <center><a href="par_virtual lib.web"><img src="assets1/images/Virtual Library.png"></a></center>
+                                    <center><a href="par_virtual lib.web"><img src="assets/images/Virtual Library.png"></a></center>
                                 </div>
                             </div><!-- end col -->
 							
 							 <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
                                    
-                                <center><a href="par_syllabus.web"><img src="assets1/images/syllabus.png"></a></center>
+                                <center><a href="par_syllabus.web"><img src="assets/images/syllabus.png"></a></center>
                                     
                                 </div>
                             </div><!-- end col -->
@@ -496,14 +496,14 @@
         </script>
 
         <!-- jQuery  -->
-        <script src="assets1/js/jquery.min.js"></script>
-        <script src="assets1/js/bootstrap.min.js"></script>
-        <script src="assets1/js/detect.js"></script>
-        <script src="assets1/js/fastclick.js"></script>
-        <script src="assets1/js/jquery.blockUI.js"></script>
-        <script src="assets1/js/waves.js"></script>
-        <script src="assets1/js/jquery.slimscroll.js"></script>
-        <script src="assets1/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="../plugins/switchery/switchery.min.js"></script>
 
         <!-- Counter js  -->
@@ -515,11 +515,11 @@
 		<script src="../plugins/raphael/raphael-min.js"></script>
 
         <!-- Dashboard init -->
-        <script src="assets1/pages/jquery.dashboard.js"></script>
+        <script src="assets/pages/jquery.dashboard.js"></script>
 
         <!-- App js -->
-        <script src="assets1/js/jquery.core.js"></script>
-        <script src="assets1/js/jquery.app.js"></script>
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
         
         <script type="text/javascript"
 	src="assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
