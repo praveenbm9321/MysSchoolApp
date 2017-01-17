@@ -810,7 +810,8 @@ public class AdminServiceImpl<T> implements AdminService<T> {
 
 	@Override
 	public Mststudclass getClassObjById(int classId) {
-		// TODO Auto-generated method stub
+		// TODO Aut
+		o-generated method stub
 		return adminDao.getClassObjById(classId);
 	}
 

@@ -229,7 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="portlet-body">
 							<div class="table-responsive">
 
-								<form action="ad_leaveInfo.jsp" method="post" name="leaveForm" //edit avi *.jsp
+								<form action="ad_leaveInfo.web" method="post" name="leaveForm" //edit avi *.jsp
 									id="leaveForm">
 
 									<table class="table table-striped table-bordered table-hover"
