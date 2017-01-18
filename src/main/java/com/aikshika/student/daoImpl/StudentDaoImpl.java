@@ -31,10 +31,11 @@ import com.aikshika.entity.Mstuploadstudmarksheet;
 import com.aikshika.entity.Tbldaysofweek;
 import com.aikshika.entity.Tblhomework;
 import com.aikshika.entity.Tblinvites;
+import com.aikshika.entity.Tblrolename;
 import com.aikshika.entity.Trnattendancerecord;
 import com.aikshika.student.dao.StudentDao;
 
-@Repository("studentdao")
+@Repository(" studentdao")
 public class StudentDaoImpl implements StudentDao {
 	@Autowired
 	SessionFactory sessionFactory;
@@ -179,7 +180,7 @@ public class StudentDaoImpl implements StudentDao {
 		return list;
 	}
 
-	@Override
+	@Override 
 	public List<Mstquestionandanswer> getTeacherNameAll(int classjj) {
 		// TODO Auto-generated method stub
 		Session s = this.sessionFactory.openSession();
@@ -192,31 +193,30 @@ public class StudentDaoImpl implements StudentDao {
 		System.out.println(list);
 		s.close();
 		return list;
-		/*
-		 * String hql =
-		 * "SELECT m.txtFirstName,t.txtQuestion,t.txtAnswer,m.tblrolename.intRoleId FROM Mstquestionandanswer as t,Mstregistration as m WHERE"
-		 * +
-		 * " t.intTeacherId = m.intRegistrationId OR t.mstregistration.intRegistrationId= m.intRegistrationId"
-		 * ; org.hibernate.Query q=s.createQuery(hql);
-		 * List<Mstquestionandanswer> homeworkList = new ArrayList<>();
-		 * List<Object[]> list = q.list(); for (Iterator iterator =
-		 * list.iterator(); iterator.hasNext();) { Object[] objects = (Object[])
-		 * iterator.next(); Mstquestionandanswer tblhomework = new
-		 * Mstquestionandanswer(); Mstregistration mstregistration = new
-		 * Mstregistration(); Tblrolename tblrolename = new Tblrolename(); for
-		 * (int i = 0; i < objects.length; i++) {
-		 * //System.out.println(objects[i]);
-		 * mstregistration.setTxtFirstName((String)objects[0]);
-		 * 
-		 * tblhomework.setTxtQuestion((String)objects[1]);
-		 * tblhomework.setTxtAnswer((String)objects[2]);
-		 * tblrolename.setIntRoleId((Integer)objects[3]);
-		 * mstregistration.setTblrolename(tblrolename);
-		 * tblhomework.setMstregistration(mstregistration);
-		 * 
-		 * } homeworkList.add(tblhomework); } System.out.println("query success"
-		 * ); return homeworkList;
-		 */
+		
+		/* String hql1 =
+		  "SELECT m.txtFirstName,t.txtQuestion,t.txtAnswer,m.tblrolename.intRoleId FROM Mstquestionandanswer as t,Mstregistration as m WHERE"
+		  +
+		  " t.intTeacherId = m.intRegistrationId OR t.mstregistration.intRegistrationId= m.intRegistrationId"
+		 ; org.hibernate.Query mq=s.createQuery(hql1);
+		  List<Mstquestionandanswer> homeworkList = new ArrayList<>();
+		  List<Object[]> list1 = q.list(); for (Iterator iterator =
+		  list1.iterator(); iterator.hasNext();) { Object[] objects = (Object[])
+		  iterator.next(); Mstquestionandanswer tblhomework = new
+		  Mstquestionandanswer(); Mstregistration mstregistration = new
+		  Mstregistration(); Tblrolename tblrolename = new Tblrolename(); for
+		  (int i = 0; i < objects.length; i++) {
+		  //System.out.println(objects[i]);
+		  mstregistration.setTxtFirstName((String)objects[0]);
+		  
+		 tblhomework.setTxtQuestion((String)objects[1]);
+		  tblhomework.setTxtAnswer((String)objects[2]);
+		  tblrolename.setIntRoleId((Integer)objects[3]);
+		  mstregistration.setTblrolename(tblrolename);
+		  tblhomework.setMstregistration(mstregistration);
+		  } homeworkList.add(tblhomework); } System.out.println("query success"
+		  ); return homeworkList;
+		*/ 
 	}
 
 	/*
