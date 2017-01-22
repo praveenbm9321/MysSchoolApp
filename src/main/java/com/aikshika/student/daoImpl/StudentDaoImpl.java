@@ -190,7 +190,7 @@ public class StudentDaoImpl implements StudentDao {
 		q.setParameter("intClassId", classjj);
 		List<Mstquestionandanswer> list = q.list();
 		System.out.println("dao..................."+list.get(0).getIntQuestionAndAnswerId());
-		System.out.println(list);
+		System.out.println(list.get(0));
 		s.close();
 		return list;
 		

@@ -5,8 +5,8 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbschoolmanagementsystem</property>
+        <property name="hibernate.connection.password">bitZero@123</property>
+        <property name="hibernate.connection.url">jdbc:mysql://54.89.59.195/dbschoolmanagementsystem</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     </session-factory>

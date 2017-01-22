@@ -28,9 +28,9 @@
 	</bean>
 	<bean id="sbDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="url"
-			value="jdbc:mysql://localhost/dbschoolmanagementsystem"></property>
+			value="jdbc:mysql://54.89.59.195:3306/dbschoolmanagementsystem"></property>
 		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="password" value="bitZero@123"></property>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 	</bean>
 
@@ -40,7 +40,7 @@
 		<property name="dataSource" ref="sbDataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.aikshika.entity.Mstaffiliation</value>
+				 <value>com.aikshika.entity.Mstaffiliation</value>
 				<value>com.aikshika.entity.Mstbank</value>
 				<value>com.aikshika.entity.Mstbloodgroup</value>
 				<value>com.aikshika.entity.Mstcategory</value>
