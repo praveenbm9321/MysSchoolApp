@@ -122,7 +122,7 @@ public class LoginController {
 					returnpage = "redirect:/FirstAttemptToLoginByStudent.web";
 				} else {
 					model.addAttribute("message", "Student Logged in Successfully");
-					returnpage = "redirect:/ad_index_For_Student.web";
+					returnpage = "redirect:/ad_index_For_Student";
 				}
 				break;
 			case "Parent":
