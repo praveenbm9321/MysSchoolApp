@@ -60,12 +60,12 @@ License: You must have a valid license purchased only from themeforest(the above
 	window.location.hash = "Again-No-back-button";//again because google chrome don't insert first hash into history
 	window.onhashchange = function() {
 		window.location.hash = "";
-	}
+	} 
 </script> -->
 
 <script type="text/javascript">
 	function back_block() {
-		window.history.foward(-1)
+		window.history.forward(-1)
 	}
 </script> 
 
@@ -74,7 +74,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		$('#form1').validate({ // initialize the plugin
+		$('#form1').validate({ // initialize the plugin 
 			rules : {
 				uname : {
 					required : true,
@@ -559,7 +559,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	</div>
 	<!-- END LOGIN -->
 	<!-- BEGIN COPYRIGHT -->
-	<div class="copyright">2016 &copy; by SeekDigital.</div>
+	<div class="copyright">2017 &copy; by Aikshika.</div>
 	<!-- END COPYRIGHT -->
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 	<!-- BEGIN CORE PLUGINS -->

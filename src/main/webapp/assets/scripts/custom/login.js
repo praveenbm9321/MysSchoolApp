@@ -7,7 +7,7 @@ var Login = function () {
 	            errorClass: 'help-block', // default input error message class
 	            focusInvalid: false, // do not focus the last invalid input
 	            rules: {
-	                username: {
+	                uname: {
 	                    required: true
 	                },
 	                password: {
@@ -19,7 +19,7 @@ var Login = function () {
 	            },
 
 	            messages: {
-	                username: {
+	                uname: {
 	                    required: "Username is required."
 	                },
 	                password: {

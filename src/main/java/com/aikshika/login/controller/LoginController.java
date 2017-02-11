@@ -89,7 +89,10 @@ public class LoginController {
 		// HttpSession session = req.getSession();
 		session.setAttribute("nameforpwd", uname);
 		Mstlogin userdto = loginService.loadUserByUsername(uname, AESencrp.encrypt(pwd));
-		String oldPass = userdto.getTxtPassword();
+		String oldPass =null;
+		if(userdto!=null)
+		oldPass = userdto.getTxtPassword();
+		
 		session.setAttribute("oldPass", oldPass);
 		// System.out.println("In Welcome Ctrl userdto=
 		// "+userdto.getMstregistration().getIntRegistrationId());
