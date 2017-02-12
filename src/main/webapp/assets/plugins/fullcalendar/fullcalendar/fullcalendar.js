@@ -4122,8 +4122,7 @@ function AgendaEventRenderer() {
 			start: function(ev, ui) {
 				trigger('eventDragStart', eventElement, event, ev, ui);
 				hideEvents(event, eventElement);
-				origWidth = 
-				.width();
+				origWidth.width();
 				hoverListener.start(function(cell, origCell, rowDelta, colDelta) {
 					clearOverlays();
 					if (cell) {
