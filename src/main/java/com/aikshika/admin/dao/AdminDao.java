@@ -52,6 +52,7 @@ import com.aikshika.entity.Trndocumentupload;
 import com.aikshika.entity.Trnteacherleaveapp;
 
 public interface AdminDao<T> {
+
 	public List<Mstsemester> semester();
 
 	// public List<Mstcity> city();

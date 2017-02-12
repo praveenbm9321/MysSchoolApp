@@ -52,7 +52,7 @@ import com.aikshika.entity.Trndocumentupload;
 import com.aikshika.entity.Trnteacherleaveapp;
 
 public interface AdminService<T> {
-	
+
 	public List<Mstsemester> semester();
 
 	public List<Mststream> stream();

@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.aikshika.admin.dao.AdminDao;
 import com.aikshika.admin.service.AdminService;
 import com.aikshika.entity.Mstaffiliation;
@@ -55,8 +57,6 @@ import com.aikshika.entity.Trnteacherleaveapp;
 
 @Service("adminService")
 public class AdminServiceImpl<T> implements AdminService<T> {
-	
-   
 	@Autowired
 	AdminDao<T> adminDao;
 
