@@ -89,10 +89,7 @@ public class LoginController {
 		// HttpSession session = req.getSession();
 		session.setAttribute("nameforpwd", uname);
 		Mstlogin userdto = loginService.loadUserByUsername(uname, AESencrp.encrypt(pwd));
-		String oldPass =null;
-		if(userdto!=null)
-		oldPass = userdto.getTxtPassword();
-		
+		String oldPass = userdto.getTxtPassword();
 		session.setAttribute("oldPass", oldPass);
 		// System.out.println("In Welcome Ctrl userdto=
 		// "+userdto.getMstregistration().getIntRegistrationId());
@@ -125,7 +122,7 @@ public class LoginController {
 					returnpage = "redirect:/FirstAttemptToLoginByStudent.web";
 				} else {
 					model.addAttribute("message", "Student Logged in Successfully");
-					returnpage = "redirect:/ad_index_For_Student";
+					returnpage = "redirect:/ad_index_For_Student.web";
 				}
 				break;
 			case "Parent":

@@ -688,14 +688,6 @@
 																	</th>
 																</c:otherwise>
 															</c:choose>
-
-
-
-
-
-
-
-
 															<th><b>Section</b></th>
 
 															<c:choose>

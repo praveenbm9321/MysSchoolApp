@@ -1641,12 +1641,12 @@ public class AdminController<T> {
 	// ---------------------------doc upload end--------------------------
 
 	/* fee management start */
-	@RequestMapping(value = "fin_fee management.web")
+	@RequestMapping(value = "fin_fee_management.web")
 	public ModelAndView finFeeManagement() {
 		if (session.getAttribute("intRegId") == null || session.getAttribute("intRegId") == "") {
 			return new ModelAndView("redirect:/login.web");
 		} else {
-			ModelAndView m = new ModelAndView("fin_fee management");
+			ModelAndView m = new ModelAndView("fin_fee_management");
 			ArrayList<Mststudclass> classes = (ArrayList<Mststudclass>) adminService.getClasses();
 			ArrayList<Mststudclasssection> sections = (ArrayList<Mststudclasssection>) adminService.getSections();
 			m.addObject("classes", classes);
@@ -1655,12 +1655,12 @@ public class AdminController<T> {
 		}
 	}
 
-	@RequestMapping(value = "fin_fee management.web", method = RequestMethod.POST)
+	@RequestMapping(value = "fin_fee_management.web", method = RequestMethod.POST)
 	public ModelAndView finFeeManagementSearch(HttpServletRequest req) {
 		if (session.getAttribute("intRegId") == null || session.getAttribute("intRegId") == "") {
 			return new ModelAndView("redirect:/login.web");
 		} else {
-			ModelAndView m = new ModelAndView("fin_fee management");
+			ModelAndView m = new ModelAndView("fin_fee_management");
 			int classId = Integer.parseInt(req.getParameter("ClassID"));
 			int SectionId = Integer.parseInt(req.getParameter("SectionId"));
 			int StudentId = Integer.parseInt(req.getParameter("StudentId"));

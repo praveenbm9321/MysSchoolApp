@@ -67,7 +67,6 @@ import com.aikshika.entity.Trnteacherleaveapp;
 @Repository("adminDao")
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public class AdminDaoImpl<T> implements AdminDao<T> {
-
 	@Autowired
 	private SessionFactory sessionFactory;
 

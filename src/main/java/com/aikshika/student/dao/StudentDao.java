@@ -74,7 +74,7 @@ public  List<String> getTeacherName();
 
 	public String getStuNames(int studId);
 	
-	public List<Integer> getStudentListe(int studId );
+	public List<Integer> getStudentListe(int studId);
 
 	public List<Trnattendancerecord> getStudentAttendFromToDate(java.util.Date startDate, java.util.Date endDate ,int id);
 
