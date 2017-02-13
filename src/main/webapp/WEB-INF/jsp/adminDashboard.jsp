@@ -356,7 +356,7 @@
                             <div class="col-lg-2 col-md-4 col-sm-6">
                                 <div class="card-box widget-box-one">
                                    
-                                <center><a href="fin_fee management.web"><img src="assets/images/feemanagement.png"></a></center>
+                                <center><a href="/SMS/getAllFees"><img src="assets/images/feemanagement.png"></a></center>
                                     
                                 </div>
                             </div><!-- end col -->

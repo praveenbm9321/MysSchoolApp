@@ -632,7 +632,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 
-					<li id="adminFeeMgt"><a href="fin_fee management.web"> <i
+					<li id="adminFeeMgt"><a href="/SMS/getAllFees"> <i
 							class="fa  fa-money"></i> Fee Management
 
 					</a></li>
