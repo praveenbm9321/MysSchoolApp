@@ -294,6 +294,14 @@ public class TeacherDaoImpl implements TeacherDao, Serializable {
 					+ "order by l.dtAppliedDate desc ";
 			
 			studentLeave = new ArrayList<>();
+			
+			// added by suhas 14-feb-2017
+			// if no record exist then it throws error.
+			if(sec.isEmpty())
+			{
+				sec.add(1);
+			}
+			
 			List<Object[]> list2 = session.createQuery(hql).setParameterList("c", cls).setParameterList("s", sec)
 					.list();
 			session.close();
@@ -366,6 +374,13 @@ public class TeacherDaoImpl implements TeacherDao, Serializable {
 				+ "WHERE dtAppliedDate between :d1 and :d2 and m.intRegistrationId = l.mstregistration.intRegistrationId AND m.mststudclass.intClassId in(:c) AND m.mststudclasssection.intSectionId in(:s) "
 				+ "order by l.dtAppliedDate desc";
 
+				// added by suhas 14-feb-2017
+				// if no record exist then it throws error.
+				if(sec.isEmpty())
+				{
+					sec.add(1);
+				}
+				
 		Query query1 = session.createQuery(hql).setParameterList("c", cls).setParameterList("s", sec);
 		query1.setParameter("d1", fromDate);
 		query1.setParameter("d2", toDate);
@@ -423,6 +438,12 @@ public class TeacherDaoImpl implements TeacherDao, Serializable {
 				+ "WHERE intStatus=:s and dtAppliedDate between :d1 and :d2 and m.intRegistrationId = l.mstregistration.intRegistrationId AND m.mststudclass.intClassId in(:c) AND m.mststudclasssection.intSectionId in(:s)"
 				+ "order by l.dtAppliedDate desc";
 
+		// added by suhas 14-feb-2017
+		// if no record exist then it throws error.
+		if(sec.isEmpty())
+		{
+			sec.add(1);
+		}
 		Query query1 = session.createQuery(hql).setParameterList("c", cls).setParameterList("s", sec);
 		query1.setParameter("d1", fromDate);
 		query1.setParameter("d2", toDate);

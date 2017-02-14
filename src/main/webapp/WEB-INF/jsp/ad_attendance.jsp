@@ -695,13 +695,13 @@ pie chart
 <!-- END CONTENT -->
 
 
-<div class="footer">
+<!-- <div class="footer">
 	<div class="footer-inner">2014 &copy; by SeekDigital</div>
 	<div class="footer-tools">
 		<span class="go-top"> <i class="fa fa-angle-up"></i>
 		</span>
 	</div>
-</div>
+</div> -->
 <!-- 
 END FOOTER
 BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time)

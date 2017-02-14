@@ -188,6 +188,9 @@ public class StudentDaoImpl implements StudentDao {
 		String hql = "from Mstquestionandanswer where intClassId=:intClassId";
 		org.hibernate.Query q = s.createQuery(hql);
 		q.setParameter("intClassId", classjj);
+		if(q.list().isEmpty())
+			return new ArrayList<Mstquestionandanswer>();
+		
 		List<Mstquestionandanswer> list = q.list();
 		System.out.println("dao..................."+list.get(0).getIntQuestionAndAnswerId());
 		System.out.println(list.get(0));

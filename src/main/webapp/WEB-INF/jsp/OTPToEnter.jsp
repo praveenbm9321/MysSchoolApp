@@ -134,7 +134,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		</form> -->
 	</div>
 	
-	<div class="copyright">2016 &copy; by SeekDigital.</div>
+	<div class="copyright">2017 &copy; by Aikshika.</div>
 	<script src="assets/plugins/jquery-1.10.2.min.js"
 		type="text/javascript"></script>
 	<script src="assets/plugins/jquery-migrate-1.2.1.min.js"

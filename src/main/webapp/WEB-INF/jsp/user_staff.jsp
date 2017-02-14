@@ -582,7 +582,7 @@ function getdelInfo() {
 
 <!-- BEGIN FOOTER -->
 <div class="footer">
-	<div class="footer-inner">2014 &copy; by SeekDigital</div>
+	<div class="footer-inner">2017 &copy; by Aikshika</div>
 	<div class="footer-tools">
 		<span class="go-top"> <i class="fa fa-angle-up"></i>
 		</span>
