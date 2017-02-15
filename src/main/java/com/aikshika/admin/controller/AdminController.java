@@ -111,6 +111,8 @@ import com.aikshika.entity.Trnattendancerecord;
 import com.aikshika.entity.Trndocumenttype;
 import com.aikshika.entity.Trndocumentupload;
 import com.aikshika.entity.Trnteacherleaveapp;
+import com.aikshika.login.daoImpl.LoginDaoImpl;
+import com.aikshika.login.service.LoginService;
 import com.aikshika.student.service.StudentService;
 
 @Controller
@@ -2987,6 +2989,7 @@ public class AdminController<T> {
 				mstloginStu.setTxtPassword(AESencrp.encrypt(RandomUtil.generateRandomPassword()));
 				mstloginStu.setTxtUserName(userNameStu);
 				mstloginStu.setIntParentId(reg.getIntRegistrationId());
+				mstloginStu.setIntStatus(0);
 				adminService.addLoginDetails(mstloginStu);
 
 				// for userrole parent
@@ -3012,15 +3015,15 @@ public class AdminController<T> {
 				String stuUserName = mstloginStu.getTxtUserName();
 				String stuPassword = mstloginStu.getTxtPassword();
 				AdAstraApi smsObj = new AdAstraApi();
-				smsObj.sendingDetailsToParent(fMobile, parUserName, parPassword, stuUserName, stuPassword);
-				smsObj.sendingDetailsToParent(mMobile, parUserName, parPassword, stuUserName, stuPassword);
+				smsObj.sendingDetailsToParent(fMobile, parUserName,AESencrp.decrypt(parPassword), stuUserName, AESencrp.decrypt(stuPassword));
+				smsObj.sendingDetailsToParent(mMobile, parUserName, AESencrp.decrypt(parPassword), stuUserName, AESencrp.decrypt(stuPassword));
 				// for send Email
 				if ((!fEmail.equals("")) || (!mEmail.equals(""))) {
 					MimeMessage mimeMessage = mailSender.createMimeMessage();
 					MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 					String body = "Thank you for registering with us.\n" + "Your Login Credentials are,"
-							+ "\nParent Id : " + parUserName + "\nPassword : " + parPassword + "\nStudent Id : "
-							+ stuUserName + "\nPassword : " + stuPassword + "\nPlease do not share it with anyone.";
+							+ "\nParent Id : " + parUserName + "\nPassword : " + AESencrp.decrypt(parPassword) + "\nStudent Id : "
+							+ stuUserName + "\nPassword : " +AESencrp.decrypt(stuPassword)+ "\nPlease do not share it with anyone.";
 					;
 					if (!fEmail.equals("")) {
 						mimeMessageHelper.setTo(fEmail);
@@ -3047,6 +3050,7 @@ public class AdminController<T> {
 				mstloginStu.setTxtPassword(AESencrp.encrypt(RandomUtil.generateRandomPassword()));
 				mstloginStu.setTxtUserName(userNameStu);
 				mstloginStu.setIntParentId(regObjLog.getIntRegistrationId());
+				mstloginStu.setIntStatus(0);
 				adminService.addLoginDetails(mstloginStu);
 
 				// for userrole student
@@ -3066,19 +3070,22 @@ public class AdminController<T> {
 				String stuUserName = mstloginStu.getTxtUserName();
 				String stuPassword = mstloginStu.getTxtPassword();
 				AdAstraApi smsObj = new AdAstraApi();
-				smsObj.sendingDetailsToParent(fMobile, parUserName, parPassword, stuUserName, stuPassword);
+				smsObj.sendingDetailsToParent(fMobile, parUserName, AESencrp.decrypt(parPassword), stuUserName, AESencrp.decrypt(stuPassword));
 
 				// for send Email
 				MimeMessage mimeMessage = mailSender.createMimeMessage();
 				MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 				String body = "Thank you for registering with us.\n" + "Your Login Credentials are," + "\nParent Id : "
-						+ parUserName + "\nPassword : " + parPassword + "\nStudent Id : " + stuUserName
-						+ "\nPassword : " + stuPassword + "\nPlease do not share it with anyone.";
+						+ parUserName + "\nPassword : " +AESencrp.decrypt(parPassword) + "\nStudent Id : " + stuUserName
+						+ "\nPassword : " +AESencrp.decrypt(stuPassword) + "\nPlease do not share it with anyone.";
 				;
 				mimeMessageHelper.setTo(fEmail);
 				mimeMessageHelper.setSubject("Registration Success!!!");
 				mimeMessageHelper.setText(body);
 				mailSender.send(mimeMessage);
+		
+				
+				
 
 			}
 
@@ -3177,8 +3184,10 @@ public class AdminController<T> {
 			regObj.setTxtDesignation(desi);
 			regObj.setTxtPerAddress(perAdd);
 			regObj.setTxtTempAddress(tempAdd);
-
+			
+			
 			Mstgender genObj = new Mstgender();
+			
 			genObj.setIntGenderId(genId);
 
 			Tblrolename trn = new Tblrolename();
@@ -3205,6 +3214,7 @@ public class AdminController<T> {
 			mstloginTeach.setMstregistration(regObj);
 			mstloginTeach.setTxtPassword(AESencrp.encrypt(RandomUtil.generateRandomPassword()));
 			mstloginTeach.setTxtUserName(userName);
+			mstloginTeach.setIntStatus(0);
 			adminService.addLoginDetails(mstloginTeach);
 
 			// for userrole
@@ -3218,13 +3228,13 @@ public class AdminController<T> {
 			String teachUserName = mstloginTeach.getTxtUserName();
 			String teachPassword = mstloginTeach.getTxtPassword();
 			AdAstraApi smsObj = new AdAstraApi();
-			smsObj.sendingDetailsToTeacher(mNum, teachUserName, teachPassword);
+			smsObj.sendingDetailsToTeacher(mNum, teachUserName, AESencrp.decrypt(teachPassword));
 
 			// for send Email
 			MimeMessage mimeMessage = mailSender.createMimeMessage();
 			MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 			String body = "Thank you for registering with us.\n" + "Your Login Credentials are," + "\nTeacher Id : "
-					+ teachUserName + "\nPassword : " + teachPassword + "\nPlease do not share it with anyone.";
+					+ teachUserName + "\nPassword : " + AESencrp.decrypt(teachPassword) + "\nPlease do not share it with anyone.";
 			;
 			mimeMessageHelper.setTo(email);
 			mimeMessageHelper.setSubject("Registration Success!!!");

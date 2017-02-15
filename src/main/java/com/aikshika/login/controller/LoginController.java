@@ -229,6 +229,14 @@ public class LoginController {
 		if (newPass.equals(cnfPass)) {
 			Integer result = loginService.afterConfirmationUpdatePasswordAndReturnToLoginPage(AESencrp.encrypt(newPass), userName);
 			// mav.addObject("msg2", "Password changed successfully!");
+			
+			// Added By Suhas HB
+			// if user try to login first time end click forgot password after that if user resets tha new password then user was not able to login 
+			// added below line to set or invalidate the first time login.
+			
+			
+			loginService.updateUserStatusIfUserLoginFirstTime(userName,AESencrp.encrypt(newPass)) ;
+			
 			return new ModelAndView("login", "msg2", "Password changed successfully!");
 		} else {
 			// mav.addObject("msg2", "Password does not match!");

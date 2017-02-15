@@ -25,4 +25,6 @@ public Integer getRegistrationIdFromMstloginByName(String userName,String mn);
 	public List<Mstregistration> getFisrtLast(String userName);
 	
 	public void updateUserStatusIfUserLoginFirstTime(String username, String pwd);
+	
+	
 }
