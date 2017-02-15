@@ -426,7 +426,7 @@
                 </div> <!-- content -->
 
                 <footer class="footer text-right">
-                    2016 Â© Aikshika.
+                    2017 � Aikshika.
                     Terms & Conditions
                 </footer>
 
